@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+	  if(window.navigator.userAgent.indexOf('MSIE') > -1 || window.navigator.userAgent.indexOf('Trident') > -1){
+		  window.location.replace("../not_support_vue.htm");
+	  }
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" href="/favicon.ico" />
+	<title></title>
+	${AWSJSAndCSSImport}
+	<!--
+    其它的js或css引用方式示例（<%= htmlWebpackPlugin.options.awsjsandcsspath%>）
+    <link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.options.awsjsandcsspath%>apps/_bpm.platform/css/model/console.m.dw.design.css"/>
+  -->
+	<script>
+	  const settingParam = ${settingParam};
+	  const axiosBaseUrl =  "${axiosBaseUrl}";
+	  const production =  ${isProduction};
+		const devUserInfo = ${devUserInfo};
+	</script>
+</head>
+<body style="margin:0;">
+<div id="app"></div>
+<script type="module" src="/src/main.ts"></script>
+<!-- built files will be auto injected -->
+</body>
+</html>
